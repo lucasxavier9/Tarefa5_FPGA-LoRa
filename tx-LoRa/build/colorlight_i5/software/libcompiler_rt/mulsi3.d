@@ -1,0 +1,2 @@
+mulsi3.o: \
+ /home/z7/Desktop/eda/oss-cad-suite/litex/litex/litex/soc/software/libcompiler_rt/mulsi3.c

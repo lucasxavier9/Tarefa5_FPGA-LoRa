@@ -1,0 +1,38 @@
+{
+  "host": {
+    "c": {
+      "id": "gcc",
+      "exelist": [
+        "riscv64-unknown-elf-gcc"
+      ],
+      "linker_exelist": [
+        "riscv64-unknown-elf-gcc"
+      ],
+      "file_suffixes": [
+        "c"
+      ],
+      "default_suffix": "c",
+      "version": "15.1.0",
+      "full_version": "riscv64-unknown-elf-gcc (GCC) 15.1.0",
+      "linker_id": "ld.bfd"
+    }
+  },
+  "build": {
+    "c": {
+      "id": "gcc",
+      "exelist": [
+        "cc"
+      ],
+      "linker_exelist": [
+        "cc"
+      ],
+      "file_suffixes": [
+        "c"
+      ],
+      "default_suffix": "c",
+      "version": "11.5.0",
+      "full_version": "cc (GCC) 11.5.0 20240719 (Red Hat 11.5.0-5)",
+      "linker_id": "ld.bfd"
+    }
+  }
+}
