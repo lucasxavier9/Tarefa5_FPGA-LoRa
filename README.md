@@ -19,6 +19,24 @@ O código foi desenvolvido em **C** e compilado utilizando a **OSS CAD Suite**, 
 
 ## Estrutura do Projeto
 
+### Conexões de Hardware
+
+### FPGA (Transmissor)
+
+| **Componente** | **Interface** | **Pinos FPGA**       | **Observações**                  |
+|----------------|---------------|---------------------|----------------------------------|
+| BH1750         | I2C           | SDA, SCL            | Sensor de luminosidade (0x23)    |
+| RFM95 LoRa     | SPI           | MOSI: PIN_19, MISO: PIN_16, SCK: PIN_18 | Comunicação LoRa                |
+| RFM95 LoRa     | GPIO          | CS: PIN_17, RST: PIN_20, DIO0: PIN_8 | Controle módulo LoRa            |
+| Console        | UART          | TX, RX              | Interface serial para debug      |
+
+### Raspberry Pi Pico (Receptor)
+
+| **Componente** | **Interface** | **Pinos Pico**       | **Observações**                  |
+|----------------|---------------|---------------------|----------------------------------|
+| OLED SSD1306   | I2C           | SDA: GPIO 14, SCL: GPIO 15 | Display 128x64 (0x3C)          |
+| RFM95 LoRa     | SPI           | MOSI: GPIO 19, MISO: GPIO 16, SCK: GPIO 18 | Comunicação LoRa                |
+| RFM95 LoRa     | GPIO          | CS: GPIO 17, RST: GPIO 20, DIO0: GPIO 8 | Controle módulo LoRa            |
 
 ---
 
@@ -95,4 +113,4 @@ Durante a execução, o firmware:
 2. Lê os valores de luminosidade do sensor (luminosidade);
 3. Envia os dados via LoRa RFM95 para outro nó/receptor;
 4. Permite monitoramento e debug através do console (scan_i2c, info_LoRa);
-5. Repete a leitura e envio periodicamente ou sob comando do usuário (enviar).
+5. Repete a leitura e envio sob comando do usuário (enviar).
