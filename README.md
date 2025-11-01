@@ -36,9 +36,9 @@ O código foi desenvolvido em **C** e compilado utilizando a **OSS CAD Suite**, 
 | Comando        | Descrição                                  |
 |----------------|---------------------------------------------|
 | `help`         | Exibe a lista de comandos disponíveis       |
-| `enviar`       | Lê o sensor BH1750 e envia os dados via LoRa |
-| `led`          | Alterna o estado do LED onboard             |
 | `reboot`       | Reinicia o sistema                          |
+| `led`          | Alterna o estado do LED onboard             |
+| `enviar`       | Lê o sensor BH1750 e envia os dados via LoRa |
 | `info_LoRa`    | Mostra informações do módulo LoRa conectado |
 | `scan_i2c`    | Varre o barramento I2C e imprime os endereços de dispositivos |
 
